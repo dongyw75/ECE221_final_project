@@ -1,0 +1,55 @@
+========
+Read library consisting of files: ( /mnt/home/ljcohen/flies_space/sra//SRR3390480_1.fastq, /mnt/home/ljcohen/flies_space/sra//SRR3390480_2.fastq )
+
+Expected format: Library format { type:paired end, relative orientation:inward, strandedness:unstranded }
+
+# of consistent alignments: 67215252
+# of inconsistent alignments: 4165173
+strand bias = 0.501663 (0.5 is unbiased)
+# alignments with format Library format { type:paired end, relative orientation:inward, strandedness:(antisense, sense) }: 33719373
+# alignments with format Library format { type:paired end, relative orientation:inward, strandedness:(sense, antisense) }: 33495879
+
+========
+---- counts for each format type ---
+Library format { type:single end, relative orientation:matching, strandedness:(sense, antisense) } : 0
+Library format { type:paired end, relative orientation:matching, strandedness:(sense, antisense) } : 0
+Library format { type:single end, relative orientation:outward, strandedness:(sense, antisense) } : 0
+Library format { type:paired end, relative orientation:outward, strandedness:(sense, antisense) } : 46375
+Library format { type:single end, relative orientation:inward, strandedness:(sense, antisense) } : 0
+Library format { type:paired end, relative orientation:inward, strandedness:(sense, antisense) } : 33495879
+Library format { type:single end, relative orientation:none, strandedness:(sense, antisense) } : 0
+Library format { type:paired end, relative orientation:none, strandedness:(sense, antisense) } : 0
+Library format { type:single end, relative orientation:matching, strandedness:(antisense, sense) } : 0
+Library format { type:paired end, relative orientation:matching, strandedness:(antisense, sense) } : 0
+Library format { type:single end, relative orientation:outward, strandedness:(antisense, sense) } : 0
+Library format { type:paired end, relative orientation:outward, strandedness:(antisense, sense) } : 47731
+Library format { type:single end, relative orientation:inward, strandedness:(antisense, sense) } : 0
+Library format { type:paired end, relative orientation:inward, strandedness:(antisense, sense) } : 33719373
+Library format { type:single end, relative orientation:none, strandedness:(antisense, sense) } : 0
+Library format { type:paired end, relative orientation:none, strandedness:(antisense, sense) } : 0
+Library format { type:single end, relative orientation:matching, strandedness:sense } : 0
+Library format { type:paired end, relative orientation:matching, strandedness:sense } : 54533
+Library format { type:single end, relative orientation:outward, strandedness:sense } : 0
+Library format { type:paired end, relative orientation:outward, strandedness:sense } : 0
+Library format { type:single end, relative orientation:inward, strandedness:sense } : 0
+Library format { type:paired end, relative orientation:inward, strandedness:sense } : 0
+Library format { type:single end, relative orientation:none, strandedness:sense } : 1928367
+Library format { type:paired end, relative orientation:none, strandedness:sense } : 0
+Library format { type:single end, relative orientation:matching, strandedness:antisense } : 0
+Library format { type:paired end, relative orientation:matching, strandedness:antisense } : 95085
+Library format { type:single end, relative orientation:outward, strandedness:antisense } : 0
+Library format { type:paired end, relative orientation:outward, strandedness:antisense } : 0
+Library format { type:single end, relative orientation:inward, strandedness:antisense } : 0
+Library format { type:paired end, relative orientation:inward, strandedness:antisense } : 0
+Library format { type:single end, relative orientation:none, strandedness:antisense } : 1993082
+Library format { type:paired end, relative orientation:none, strandedness:antisense } : 0
+Library format { type:single end, relative orientation:matching, strandedness:unstranded } : 0
+Library format { type:paired end, relative orientation:matching, strandedness:unstranded } : 0
+Library format { type:single end, relative orientation:outward, strandedness:unstranded } : 0
+Library format { type:paired end, relative orientation:outward, strandedness:unstranded } : 0
+Library format { type:single end, relative orientation:inward, strandedness:unstranded } : 0
+Library format { type:paired end, relative orientation:inward, strandedness:unstranded } : 0
+Library format { type:single end, relative orientation:none, strandedness:unstranded } : 0
+Library format { type:paired end, relative orientation:none, strandedness:unstranded } : 0
+------------------------------------
+

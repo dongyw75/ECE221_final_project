@@ -6,8 +6,8 @@ library(readr)
 library("RColorBrewer")
 setwd("~/Documents/UCDavis/ECE221/ECE221_final_project")
 source('~/Documents/scripts/plotPCAWithSampleNames.R')
-#flymatrix<-read.csv("flies_space_counts.csv")
-flymatrix<-read.csv("GSE80323_normalized_gene_tpm.csv")
+flymatrix<-read.csv("flies_space_counts.csv")
+#flymatrix<-read.csv("GSE80323_normalized_gene_tpm.csv")
 head(flymatrix)
 # SRR3390478.quant = G1R1
 # SRR3390479.quant = G1R2
@@ -18,7 +18,7 @@ head(flymatrix)
 # SRR3390484.quant = G3R3 = G1R1
 # SRR3390485.quant = G3R4
 colnames(flymatrix)<-c("Name","G3R3","G1R2","G1R3","G1R4","G3R1","G3R2","G1R1","G3R4")
-colnames(flymatrix)<-c("Name","G1R1","G1R2","G1R3","G1R4","G3R1","G3R2","G3R3","G3R4")
+#colnames(flymatrix)<-c("Name","G1R1","G1R2","G1R3","G1R4","G3R1","G3R2","G3R3","G3R4")
 head(flymatrix)
 rownames(flymatrix)<-flymatrix$Name
 flymatrix<-flymatrix[,c(2:9)]
@@ -42,10 +42,10 @@ files
 txi.salmon <- tximport(files, type = "salmon", tx2gene = tx2gene, reader = read_tsv)
 head(txi.salmon$counts)
 dim(txi.salmon$counts)
-ExpDesign <- data.frame(row.names=colnames(flymatrix), condition = c("G1","G1","G1","G1","G3","G3","G3","G3"))
-#ExpDesign <- data.frame(row.names=colnames(txi.salmon$counts), condition = c("G3","G1","G1","G1","G3","G3","G1","G3"))
-#dds <- DESeqDataSetFromTximport(txi.salmon, ExpDesign, ~condition)
-dds<-DESeqDataSetFromMatrix(countData=flymatrix, colData=ExpDesign,design=~condition)
+#ExpDesign <- data.frame(row.names=colnames(flymatrix), condition = c("G1","G1","G1","G1","G3","G3","G3","G3"))
+ExpDesign <- data.frame(row.names=colnames(txi.salmon$counts), condition = c("G3","G1","G1","G1","G3","G3","G1","G3"))
+dds <- DESeqDataSetFromTximport(txi.salmon, ExpDesign, ~condition)
+#dds<-DESeqDataSetFromMatrix(countData=flymatrix, colData=ExpDesign,design=~condition)
 dds$condition <- relevel(dds$condition, "G1")
 dds<-DESeq(dds,betaPrior=FALSE)
 norm_counts<-counts(dds,normalized=TRUE)
@@ -67,6 +67,7 @@ counts<-merge_biomart_res_counts[!duplicated(merge_biomart_res_counts$GeneID), ]
 head(counts)
 dim(counts)
 ###
+plotDispEsts(dds)
 log_dds<-rlog(dds)
 plotPCAWithSampleNames(log_dds, intgroup="condition", ntop=40000)
 ###

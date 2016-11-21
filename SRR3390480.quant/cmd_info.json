@@ -1,0 +1,9 @@
+{
+    "salmon_version": "0.6.0",
+    "index": "/mnt/home/ljcohen/flies_space/ref//salmon_index",
+    "threads": "4",
+    "libType": "IU",
+    "mates1": "/mnt/home/ljcohen/flies_space/sra//SRR3390480_1.fastq",
+    "mates2": "/mnt/home/ljcohen/flies_space/sra//SRR3390480_2.fastq",
+    "output": "/mnt/home/ljcohen/flies_space/salmon//SRR3390480.quant"
+}

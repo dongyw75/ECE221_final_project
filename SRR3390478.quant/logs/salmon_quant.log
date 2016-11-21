@@ -1,0 +1,35 @@
+[2016-11-16 13:36:50.017] [jointLog] [info] parsing read library format
+[2016-11-16 13:36:50.084] [jointLog] [info] Loading Quasi index
+[2016-11-16 13:37:13.335] [jointLog] [info] done
+[2016-11-16 13:41:06.148] [fileLog] [info] 
+At end of round 0
+==================
+Observed 26893693 total fragments (26893693 in most recent round)
+
+[2016-11-16 13:41:06.147] [jointLog] [info] Computed 91083 rich equivalence classes for further processing
+[2016-11-16 13:41:06.147] [jointLog] [info] Counted 24375015 total reads in the equivalence classes 
+[2016-11-16 13:41:06.156] [jointLog] [info] Mapping rate = 90.6347%
+
+[2016-11-16 13:41:06.156] [jointLog] [info] finished quantifyLibrary()
+[2016-11-16 13:41:06.156] [jointLog] [info] Starting optimizer
+[2016-11-16 13:41:07.107] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2016-11-16 13:41:07.111] [jointLog] [info] iteration = 0 | max rel diff. = 7.75527
+[2016-11-16 13:41:07.476] [jointLog] [info] iteration = 100 | max rel diff. = 0.132235
+[2016-11-16 13:41:07.847] [jointLog] [info] iteration = 200 | max rel diff. = 0.0682947
+[2016-11-16 13:41:08.213] [jointLog] [info] iteration = 300 | max rel diff. = 0.0514064
+[2016-11-16 13:41:08.575] [jointLog] [info] iteration = 400 | max rel diff. = 0.0431512
+[2016-11-16 13:41:08.935] [jointLog] [info] iteration = 500 | max rel diff. = 0.0230655
+[2016-11-16 13:41:09.300] [jointLog] [info] iteration = 600 | max rel diff. = 0.0342462
+[2016-11-16 13:41:09.672] [jointLog] [info] iteration = 700 | max rel diff. = 0.0491767
+[2016-11-16 13:41:10.040] [jointLog] [info] iteration = 800 | max rel diff. = 0.020838
+[2016-11-16 13:41:10.405] [jointLog] [info] iteration = 900 | max rel diff. = 0.0248444
+[2016-11-16 13:41:10.771] [jointLog] [info] iteration = 1000 | max rel diff. = 0.0214966
+[2016-11-16 13:41:11.142] [jointLog] [info] iteration = 1100 | max rel diff. = 0.0222499
+[2016-11-16 13:41:11.448] [jointLog] [info] iteration = 1185 | max rel diff. = 0.00957203
+[2016-11-16 13:41:11.452] [jointLog] [info] Finished optimizer
+[2016-11-16 13:41:11.452] [jointLog] [info] writing output 
+
+[2016-11-16 13:41:11.575] [jointLog] [warning] NOTE: Read Lib [( /mnt/home/ljcohen/flies_space/sra//SRR3390478_1.fastq, /mnt/home/ljcohen/flies_space/sra//SRR3390478_2.fastq )] :
+
+Greater than 5% of the alignments (but not, necessarily reads) disagreed with the provided library type; check the file: /mnt/home/ljcohen/flies_space/salmon//SRR3390478.quant/libFormatCounts.txt for details
+
