@@ -33,8 +33,8 @@ tx2gene<-query[,c(1,2)]
 colnames(tx2gene)<-c("TXNAME","GENEID")
 ####
 # import salmon
-dir<-"/Users/cohenl06/Documents/UCDavis/ECE221/"
-list.files("/Users/cohenl06/Documents/UCDavis/ECE221/salmon")
+dir<-"/Users/cohenl06/Documents/UCDavis/ECE221/ECE221_final_project"
+list.files("~/Documents/UCDavis/ECE221/ECE221_final_project")
 files <- file.path(dir, "salmon",c("SRR3390478.quant","SRR3390479.quant","SRR3390480.quant","SRR3390481.quant","SRR3390482.quant","SRR3390483.quant","SRR3390484.quant","SRR3390485.quant"), "quant.sf")
 #names(files) <- c("G1R1","G1R2","G1R3","G1R4","G3R1","G3R2","G3R3","G3R4")
 names(files) <- c("G3R3","G1R2","G1R3","G1R4","G3R1","G3R2","G1R1","G3R4")
