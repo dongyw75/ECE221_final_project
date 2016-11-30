@@ -1,4 +1,4 @@
-
+#detach("package:DESeq", unload=TRUE)
 library(DESeq2)
 library("lattice")
 library(biomaRt)
@@ -99,7 +99,7 @@ abline(h=c(-1,1), col="blue")
 # make a table of differentially expressed genes
 ##
 # don't have to do this each time
-#write.csv(merge_biomart_res_all,"hypergravity_space_flies_DESeq2_all.csv")
+
 res_merged_cutoff<-subset(merge_biomart_res_all,merge_biomart_res_all$padj<0.05)
 # don't have to do this each time
 #write.csv(res_merged_cutoff,"hypergravity_space_flies_DESeq2_padj0.05.csv")
@@ -109,6 +109,7 @@ up_down<-res_merged_cutoff
 dim(up_down)
 up_down_1FC<-subset(res_merged_cutoff,res_merged_cutoff$log2FoldChange>1 | res_merged_cutoff
                     $log2FoldChange< -1)
+write.csv(up_down_1FC,"DESeq2/hypergravity_space_flies_DESeq2_padj0.05.csv")
 dim(up_down_1FC)
 d<-up_down_1FC
 d<-as.matrix(up_down_1FC[,c(2:9)])
