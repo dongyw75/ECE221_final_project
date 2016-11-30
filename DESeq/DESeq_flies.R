@@ -7,7 +7,11 @@ library(tximport)
 library(readr)
 library("RColorBrewer")
 setwd("~/Documents/UCDavis/ECE221/ECE221_final_project")
-#flymatrix<-read.csv("flies_space_counts_salmon.csv")
+flymatrix<-read.csv("flies_space_counts_salmon.csv")
+rownames(flymatrix)<-flymatrix$Name
+flymatrix<-flymatrix[,c(2:9)]
+colnames(flymatrix)
+head(flymatrix)
 # SRR3390478.quant = G1R1
 # SRR3390479.quant = G1R2
 # SRR3390480.quant = G1R3
@@ -24,6 +28,12 @@ files <- file.path(dir, "salmon",c("SRR3390478.quant","SRR3390479.quant","SRR339
 #names(files) <- c("G1R1","G1R2","G1R3","G1R4","G3R1","G3R2","G3R3","G3R4")
 names(files) <- c("G3R3","G1R2","G1R3","G1R4","G3R1","G3R2","G1R1","G3R4")
 files
+# get annotations
+ensembl=useMart("ensembl")
+ensembl_id<-rownames(flymatrix)
+ensembl = useDataset("dmelanogaster_gene_ensembl",mart=ensembl)
+query<-getBM(attributes=c('flybase_transcript_id','ensembl_gene_id','external_gene_name','description'), filters = 'flybase_transcript_id', values = ensembl_id, mart=ensembl)
+tx2gene<-query[,c(1,2)]
 txi.salmon <- tximport(files, type = "salmon", tx2gene = tx2gene, reader = read_tsv)
 head(txi.salmon$counts)
 dim(txi.salmon$counts)
