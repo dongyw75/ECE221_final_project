@@ -35,6 +35,6 @@ v <- voom(dge, design, plot=TRUE)
 fit <- lmFit(v, design)
 fit <- eBayes(fit)
 topTable(fit, coef=ncol(design))
-
+write.csv( topTable(fit, coef=ncol(design), number=15000), "limma_siggenes.csv")
 
 
