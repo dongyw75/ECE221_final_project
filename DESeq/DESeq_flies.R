@@ -98,7 +98,7 @@ write.csv(merged, file="DESeq/hypergravity_space_flies_DESeq_all.csv" )
 resSig = merged[ merged$padj < 0.05, ]
 #write.csv(resSig,file="DESeq/hypergravity_space_flies_DESeq_padj0.05.csv")
 #
-plot(log2(merged$baseMean), merged$log2FoldChange, col=ifelse(merged$padj < 0.05, "red","gray67"),main="(DESeq2) G3 vs. G1 (padj<0.05, log2FC = ±1)",xlim=c(1,20),pch=20,cex=1,ylim=c(-12,12))
+plot(log2(merged$baseMean), merged$log2FoldChange, col=ifelse(merged$padj < 0.05, "red","gray67"),main="(DESeq1) G3 vs. G1 (padj<0.05, log2FC = ±1)",xlim=c(1,20),pch=20,cex=1,ylim=c(-12,12))
 abline(h=c(-1,1), col="blue")
 # heatmap
 up_down<-resSig
